@@ -154,7 +154,7 @@ WHERE w2.word = ?""", (canonical_form,)).fetchall()
     glos.sourceLangName = input_language
     glos.targetLangName = output_language
     print("Writing dictionary")
-    glos.write(output_path, format="Mobi", keep=True, exact=True, spellcheck=False, kindlegen_path="C:/Users/hanne/AppData/Local/Amazon/Kindle Previewer 3/lib/fc/bin/kindlegen.exe")
+    glos.write(output_path, format="Mobi", keep=True, exact=True, spellcheck=False, kindlegen_path="kindlegen")
     #glos.write("spanish_dictionary.kobo", format="Kobo")
     print(str(len(base_forms)) + " base forms")
     print(str(inflection_num) + " inflections")
