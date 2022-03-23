@@ -39,6 +39,7 @@ italian_dict/OEBPS/*
 spanish_dict/OEBPS/*
 French_dict/OEBPS/*
 compiled_kindle_dictionaries/*
+compiled_databases/*
 German_dict/OEBPS/*
 wrong_russian_canonical_forms.txt
 Arabic_dict/OEBPS/*
