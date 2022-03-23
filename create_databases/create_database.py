@@ -525,7 +525,7 @@ def create_database(output_db_path: str, wiktextract_json_file: str, language: s
 
             if "forms" in obj:
                 for infl_form in obj["forms"]:
-                    if any(c.isalpha() for c in infl_form["form"]) and infl_form["tags"] != ["table-tags"]:
+                    if any(c.isalpha() for c in infl_form["form"]) and infl_form["form"] != [""]:
                         inflections.append((infl_form["form"], word_id, word_pos))
 
             for sense in obj["senses"]:
