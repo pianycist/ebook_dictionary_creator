@@ -3,7 +3,7 @@ import sqlite3
 from unidecode import unidecode
 import collections
 
-
+kindlegenpath="kindlegen"
 
 ### To get the kindle dictionary creation to run, you need to replace following function in the pyglossary package 
 ### (ebook-mobi.py)
@@ -154,7 +154,7 @@ WHERE w2.word = ?""", (canonical_form,)).fetchall()
     glos.sourceLangName = input_language
     glos.targetLangName = output_language
     print("Writing dictionary")
-    glos.write(output_path, format="Mobi", keep=True, exact=True, spellcheck=False, kindlegen_path="kindlegen")
+    glos.write(output_path, format="Mobi", keep=True, exact=True, spellcheck=False, kindlegen_path=kindlegenpath)
     #glos.write("spanish_dictionary.kobo", format="Kobo")
     print(str(len(base_forms)) + " base forms")
     print(str(inflection_num) + " inflections")
