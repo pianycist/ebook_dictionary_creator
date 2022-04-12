@@ -63,7 +63,7 @@ def create_dictionary_from_zero(input_lang, output_lang, author, dict_name,
 
 if __name__ == "__main__":
     #find_words_without_stress("russian_dict.db")
-    create_ru_db_full("kaikki/kaikki.org-dictionary-Russian.json", create_wiktionary_db=True, create_openrussian_db=False, convert_utf8=False)
+    #create_ru_db_full("kaikki/kaikki.org-dictionary-Russian.json", create_wiktionary_db=True, create_openrussian_db=False, convert_utf8=False)
     #create_db_full("kaikki.org-dictionary-Spanish_new.json")
     #convert_file_to_utf8("kaikki.org-dictionary-English.json", "english_dict.json")
     #create_db_full("kaikki.org-dictionary-English.json", language=Language.ENGLISH, 
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     #create_dictionary_from_zero("Polish", "English", "Vuizur", "Polish-English dictionary", wiktextract_json_input_path="kaikki/kaikki.org-dictionary-Polish.json")
     #create_dictionary_from_zero("Portuguese", "English", "Vuizur", "Portuguese-English dictionary", wiktextract_json_input_path="kaikki/kaikki.org-dictionary-Portuguese.json")
     #create_dictionary_from_zero("Finnish", "English", "Vuizur", "Finnish-English dictionary", wiktextract_json_input_path="kaikki/kaikki.org-dictionary-Finnish.json")
-    #create_dictionary_from_zero("Latin", "English", "Vuizur", "Latin-English dictionary", wiktextract_json_input_path="kaikki/kaikki.org-dictionary-Latin.json")
+    create_dictionary_from_zero("Latin", "English", "Vuizur", "Latin-English dictionary", wiktextract_json_input_path="kaikki/kaikki.org-dictionary-Latin.json")
     #create_dictionary_from_zero("Swedish", "English", "Vuizur", "Swedish-English dictionary", wiktextract_json_input_path="kaikki/kaikki.org-dictionary-Swedish.json")
     #create_tabfile("compiled_databases/Spanish_dict.db", "spanish.txt")
     #convert_file_to_utf8("kaikki/kaikki.org-dictionary-Russian.json", )
