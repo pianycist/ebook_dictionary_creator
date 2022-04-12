@@ -40,11 +40,12 @@ WHERE w.word = ?""", (canonical_form,)).fetchall()
                 continue
             glosses_list.append(gloss[0].strip())
         glosses_list = list(dict.fromkeys(glosses_list))
-        glosshtml = ""
+        glosshtml = "<ol class=gloss>"
         #gloss_count = 1
-        #TODO: add gloss count
+       #TODO: add gloss count
         for gloss in glosses_list:
-            glosshtml += "<p>" + gloss + "</p>"
+            glosshtml += "<li>" + gloss + "</li>"
+        glosshtml += "</ol>"
 
         #get inflections
         inflections = cur.execute("""SELECT w1.word FROM word w1

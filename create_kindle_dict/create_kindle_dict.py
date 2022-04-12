@@ -45,7 +45,7 @@ def format_group_content(self, word: "List[str]", defi: str) -> str:
 		return group_content
 
 def create_kindle_dict(source_database_path: str, input_language: str, output_language: str, output_path: str, author: str,
-    title: str, try_to_fix_kindle_lookup_stupidity=False):
+    title: str, try_to_fix_kindle_lookup_stupidity=True):
     """Creates a kindle dictionary. The try_to_fix_kindle_lookup_stupidity is much slower, but vastly improves the lookup
     of words that are not recognized by default due to the buggy algorithm that does not look at inflections if a fitting
     base word exists
@@ -107,12 +107,13 @@ WHERE w.word = ?""", (canonical_form,)).fetchall()
                 continue
             glosses_list.append(gloss[0].strip())
         glosses_list = list(dict.fromkeys(glosses_list))
-        glosshtml = ""
+        glosshtml = "<ol class=gloss>"
         #gloss_count = 1
         #TODO: add gloss count
         for gloss in glosses_list:
-            glosshtml += "<p>" + gloss + "</p>"
+            glosshtml += "<li>" + gloss + "</li>"
 
+        glosshtml += "</ol>"
         #get inflections
         inflections = cur.execute("""SELECT w1.word FROM word w1
 JOIN form_of_word fow ON fow.word_id = w1.word_id 
